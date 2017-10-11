@@ -1,3 +1,16 @@
-<p>
-  navbar works!
-</p>
+<nav 
+     md-tab-nav-bar>
+     <div class="row">
+        
+        <a md-tab-link class="col-md-2"
+            *ngFor="let link of navLinks"
+            [routerLink] = "link.addr"
+            routerLinkActive #rla="routerLinkActive"
+            [active]="rla.isActive">
+            {{link.label}}
+        </a>
+    
+     </div>
+    
+</nav>
+

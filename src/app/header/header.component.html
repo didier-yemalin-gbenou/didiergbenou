@@ -3,9 +3,12 @@
     <div class="jumbotron">
       <div class="container">
         <div class="row">
-          <div @bounce class="media col-md-offset-3 col-md-6">
+          <div @bounce 
+               class="media col-md-offset-3 col-md-6">
             <div class="media-left">
-                <img class="avatar media-object" src="assets/images/profilePic.png" alt="profile pic">
+                <img class="avatar media-object" 
+                     src="assets/images/profilePic.png" 
+                     alt="profile pic">
             </div>
               
               <div class="media-body">
@@ -17,20 +20,24 @@
           </div>
         </div>
         <div class="row">
-          <div @slideIn class="col-md-7 col-md-offset-4">
-            <div  class="col-md-1" *ngFor="let icon of icons">
-                <a  
-                    title="{{ icon.tooltip }}"
-                    href=""
-                    class="fa 
-                           {{ icon.name }} 
-                           social-img">
+          <div @slideIn 
+               class="col-md-7 col-md-offset-4">
+            <div *ngFor="let icon of icons" 
+                 class="col-md-1">
+                <a title="{{ icon.tooltip }}"
+                   href="{{ icon.link }}"
+                   class="fa 
+                          {{ icon.name }} 
+                          social-img">
                 </a>
             </div>
           </div>
-           
         </div>
       </div>
     </div>
   </div>
+
+  <app-navbar></app-navbar>
+  
+
 </header>

@@ -2,11 +2,12 @@
      md-tab-nav-bar>
      <div class="row">
         
-        <a md-tab-link class="col-md-2"
+        <a mdTabLink class="col-md-2"
             *ngFor="let link of navLinks"
             [routerLink] = "link.addr"
             routerLinkActive #rla="routerLinkActive"
-            [active]="rla.isActive">
+            [active]="rla.isActive"
+            [routerLinkActiveOptions]="{ exact: true }">
             {{link.label}}
         </a>
     

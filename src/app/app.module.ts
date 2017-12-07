@@ -5,7 +5,12 @@ import { RouterModule } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MdTabsModule } from '@angular/material';
+import { MatTabsModule, 
+         MatCardModule, 
+         MatChipsModule, 
+         MatFormFieldModule,
+         MatInputModule
+        } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -46,9 +51,15 @@ import { FooterComponent } from './footer/footer.component';
       { path: '**', component: NotFoundComponent}
     ]),
     BrowserAnimationsModule,
-    MdTabsModule
+    MatTabsModule,
+    MatCardModule,
+    MatChipsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

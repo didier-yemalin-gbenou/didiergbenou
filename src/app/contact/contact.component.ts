@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
-  constructor() { }
+  messageIsBlank = true;
 
-  ngOnInit() {
+  onKeyUp(message){
+    if(message != '')
+      this.messageIsBlank = false;
+    else
+      this.messageIsBlank = true;
   }
+
 
 }

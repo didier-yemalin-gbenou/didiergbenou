@@ -1,17 +1,20 @@
 <nav 
-     md-tab-nav-bar>
-     <div class="row">
-        
-        <a mdTabLink class="col-md-2"
-            *ngFor="let link of navLinks"
-            [routerLink] = "link.addr"
-            routerLinkActive #rla="routerLinkActive"
-            [active]="rla.isActive"
-            [routerLinkActiveOptions]="{ exact: true }">
-            {{link.label}}
-        </a>
-    
+     mat-tab-nav-bar>
+     <div class="container-fluid">
+        <div class="row">
+            
+                    <a mat-tab-link class="col-md-2"
+                        *ngFor="let link of navLinks"
+                        [routerLink] = "link.addr"
+                        routerLinkActive #rla="routerLinkActive"
+                        [active]="rla.isActive"
+                        [routerLinkActiveOptions]="{ exact: true }">
+                        {{link.label}}
+                    </a>
+                
+                 </div>
      </div>
+     
     
 </nav>
 

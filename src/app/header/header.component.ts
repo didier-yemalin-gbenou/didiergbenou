@@ -1,5 +1,5 @@
 import { bounce, slideIn } from './../animations/animations-header';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,29 +10,39 @@ import { Component, OnInit } from '@angular/core';
     slideIn
   ]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   icons = [
-    { name: 'fa-linkedin',
+    { 
+      name: 'fa-linkedin',
       link: 'https://www.linkedin.com/in/didier-gbenou-08271348',
-      tooltip: 'LinkedIn' },
-    { name: 'fa-github',
+      tooltip: 'LinkedIn',
+      target: '_blank'
+    },
+    { 
+      name: 'fa-github',
       link: 'https://github.com/didier-yemalin-gbenou' ,
-      tooltip: 'Github'},
-    { name: 'fa-bitbucket',
+      tooltip: 'Github',
+      target: '_blank'
+    },
+    { 
+      name: 'fa-bitbucket',
       link: 'https://bitbucket.org/dyg23-drexel/' ,
-      tooltip: 'Bitbucket'},
-    { name: 'fa-stack-overflow',
+      tooltip: 'Bitbucket',
+      target: '_blank'
+    },
+    { 
+      name: 'fa-stack-overflow',
       link: 'https://stackoverflow.com/users/7098615/dayderluv?tab=profile' ,
-      tooltip: 'Stackoverflow'},
-    { name: 'fa-envelope',
-      link: '' ,
-      tooltip: 'Contact'}
+      tooltip: 'Stackoverflow',
+      target: '_blank'
+    },
+    { 
+      name: 'fa-envelope',
+      link: '/contact' ,
+      tooltip: 'Contact',
+      target: '_self'
+    }
   ];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

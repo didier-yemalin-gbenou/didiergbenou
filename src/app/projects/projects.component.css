@@ -1,0 +1,26 @@
+
+mat-card{
+    width: 530px;
+    height: 250px;
+    margin-left: 55px;
+    margin-top: 50px;
+}
+.mat-chip:not(.mat-basic-chip)+.mat-chip:not(.mat-basic-chip) {
+    margin: 0;
+}
+
+mat-card-title{
+    text-align: justify;
+}
+
+
+mat-chip-list{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;  
+}
+
+.data{
+    flex: 5;
+}
+

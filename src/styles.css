@@ -3,9 +3,3 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
-
-.jumbotron{
-    height: 400px;
-    background-color: #E74E4E;
-    margin-bottom: 0;
-}

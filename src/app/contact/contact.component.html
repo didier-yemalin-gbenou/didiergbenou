@@ -1,3 +1,24 @@
-<p>
-  contact works!
-</p>
+<form>
+  <div class="form-group">
+    <label for="visitorEmail">Email address</label>
+    <input type="email" class="form-control" id="visitorEmail" aria-describedby="emailHelp" placeholder="Enter your email address">
+  </div>
+
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+  </div>
+
+  <div (keyup)="onKeyUp(message.value)"
+       class="form-group">
+    <label for="body">Message</label>
+    <textarea #message class="form-control" id="body" rows="3" placeholder="Write something..."></textarea>
+  </div>
+
+  <div *ngIf="!messageIsBlank"
+        class="form-group">
+    <input type="text" class="form-control" value="Delete me to submit">
+  </div>
+
+  <button type="submit" class="btn btn-light">Submit</button>
+</form>

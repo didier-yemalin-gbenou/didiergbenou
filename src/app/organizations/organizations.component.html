@@ -1,3 +1,11 @@
-<p>
-  organizations works!
-</p>
+<ul class="list-group"> 
+  <a *ngFor="let org of organizations"
+     href="{{org.link}}"
+     title="Open link"
+     target="_blank">
+    <li class="list-group-item">
+        {{org.name}}
+      <img src="{{org.logo}}" alt="org logo">
+    </li>
+  </a>
+</ul>

@@ -1,4 +1,9 @@
 
+.jumbotron{
+    height: 400px;
+    background-color: #99A12B;
+    margin-bottom: 0;
+}
 .avatar { 
     width: 100px;
     height: 100px;
@@ -17,7 +22,7 @@
     text-align: center;
     text-decoration: none;
     border-radius: 100%;
-    background: #E70C0C;
+    background: #575A14;
     color: white;
     
 }

@@ -1,0 +1,13 @@
+mat-card{
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.title{
+    font-size: 1.5em;
+}   
+
+.location{
+    font-size: 1em;
+}

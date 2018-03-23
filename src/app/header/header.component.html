@@ -7,7 +7,7 @@
                class="media col-md-offset-3 col-md-6">
             <div class="media-left">
                 <img class="avatar media-object" 
-                     src="assets/images/profilePic.png" 
+                     src="assets/images/profilePic.jpeg" 
                      alt="profile pic">
             </div>
               
@@ -22,14 +22,22 @@
         <div class="row">
           <div @slideIn 
                class="col-md-7 col-md-offset-4">
-            <div *ngFor="let icon of icons" 
-                 class="col-md-1">
-                <a title="{{ icon.tooltip }}"
+            <div>
+                <a *ngFor="let icon of icons"
+                   class="col-md-1"
+                   matTooltip="{{ icon.tooltip }}"
                    href="{{ icon.link }}"
                    class="fa 
                           {{ icon.name }} 
                           social-img"
                    target="{{icon.target}}">
+                </a>
+                <a matTooltip="Contact"
+                   routerLink="/contact"
+                   class="fa fa-envelope
+                          social-img
+                          col-md-1"
+                   target="_self">
                 </a>
             </div>
           </div>

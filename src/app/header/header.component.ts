@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
     slideIn
   ]
 })
+
 export class HeaderComponent {
 
   icons = [
@@ -36,12 +37,6 @@ export class HeaderComponent {
       link: 'https://stackoverflow.com/users/7098615/dayderluv?tab=profile' ,
       tooltip: 'Stackoverflow',
       target: '_blank'
-    },
-    { 
-      name: 'fa-envelope',
-      link: '/contact' ,
-      tooltip: 'Contact',
-      target: '_self'
     }
   ];
 

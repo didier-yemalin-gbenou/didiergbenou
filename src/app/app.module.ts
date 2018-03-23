@@ -1,5 +1,10 @@
+import { ContactService } from './contact/contact.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
+import { ReCaptchaModule } from 'angular2-recaptcha';
 
 import { RouterModule } from '@angular/router';
 
@@ -9,7 +14,9 @@ import { MatTabsModule,
          MatCardModule, 
          MatChipsModule, 
          MatFormFieldModule,
-         MatInputModule
+         MatInputModule,
+         MatSnackBarModule,
+         MatTooltipModule
         } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -23,6 +30,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -37,7 +46,7 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,10 +64,16 @@ import { FooterComponent } from './footer/footer.component';
     MatCardModule,
     MatChipsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule,
+    MatTooltipModule,
+    ReCaptchaModule,
+    FormsModule,
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [
-    
+    ContactService
   ],
   bootstrap: [AppComponent]
 })

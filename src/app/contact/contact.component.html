@@ -1,24 +1,77 @@
-<form>
-  <div class="form-group">
+<h2>Contact Me</h2>
+
+<form #contactForm="ngForm" (ngSubmit)="processForm(contactForm)">
+  <div class="form-group"
+       [class.has-error]="email.touched && !email.valid">
     <label for="visitorEmail">Email address</label>
-    <input type="email" class="form-control" id="visitorEmail" aria-describedby="emailHelp" placeholder="Enter your email address">
+    <input required ngModel
+           #email = ngModel
+           pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+           name="email"
+           type="email"
+           class="form-control" 
+           id="visitorEmail" 
+           aria-describedby="emailHelp" 
+           placeholder="Enter your email address">
+  </div>
+  <div *ngIf="email.touched && !email.valid"
+        class="alert alert-danger">
+    <div *ngIf="email.errors.required">
+      Email is required
+    </div>
+
+    <div *ngIf="email.errors.pattern">
+      Your email address is not valid
+    </div>
+
   </div>
 
   <div class="form-group">
     <label for="subject">Subject</label>
-    <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+    <input ngModel
+           #subject = ngModel
+           required
+           name="subject"
+           type="text"
+           class="form-control" 
+           id="subject" 
+           placeholder="Enter subject">
   </div>
+
+<div *ngIf="subject.touched && !subject.valid"
+      class="alert alert-danger">
+      Subject is required
+</div>
 
   <div (keyup)="onKeyUp(message.value)"
        class="form-group">
     <label for="body">Message</label>
-    <textarea #message class="form-control" id="body" rows="3" placeholder="Write something..."></textarea>
+    <textarea #message = ngModel
+              required
+              name="message"
+              ngModel 
+              class="form-control" 
+              id="body" 
+              rows="4" 
+              placeholder="Write something...">
+    </textarea>
   </div>
-
-  <div *ngIf="!messageIsBlank"
-        class="form-group">
-    <input type="text" class="form-control" value="Delete me to submit">
+  <div *ngIf="message.touched && !message.valid"
+      class="alert alert-danger">
+      Message is required
   </div>
-
-  <button type="submit" class="btn btn-light">Submit</button>
+  
+  <div *ngIf="!_messageIsBlank"
+       class="captcha">
+    <re-captcha (captchaResponse)="processCaptcha($event)" 
+                (captchaExpired)="notifyCaptchaIsExpired()"
+                site_key="6LfWBkwUAAAAAIbTdvvyOQIstxeaOwht2YGUnYir">
+    </re-captcha>
+  </div>
+  
+  <button [disabled]="contactForm.invalid"
+          type="submit" 
+          class="btn btn-light">
+          Submit
+  </button>
 </form>

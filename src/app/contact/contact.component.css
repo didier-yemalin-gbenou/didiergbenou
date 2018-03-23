@@ -1,10 +1,39 @@
+
+h2{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
 form{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
     margin-left: 100px;
     margin-right: 100px;
 }
 
+.no-robot-validation{
+    border-color : rgb(240, 42, 42);
+}
+
+.captcha{
+    margin-bottom: 1%;
+}
+  
 .btn{
     background: #99A12B;
+    border-radius: 0;
+}
+
+.form-control {
+    padding: 0.75rem 2rem;
+    line-height: 1.5;
+    background-color: #f7f7f9;
+    border: 1px solid #ced4da;
+    border-radius: 0;
+}
+
+input{
+    min-height: 5rem;
 }

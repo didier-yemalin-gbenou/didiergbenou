@@ -1,10 +1,12 @@
-
+.all{
+    margin-top: 2%;
+}
 mat-card{
     width: 530px;
     height: 250px;
-    margin-left: 55px;
-    margin-top: 50px;
 }
+
+
 .mat-chip:not(.mat-basic-chip)+.mat-chip:not(.mat-basic-chip) {
     margin: 0;
 }

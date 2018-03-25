@@ -1,0 +1,13 @@
+/*
+These styles are applied to the ngx-bootstrap nav. Since they are injected in this component,
+the styles are imported into styles.css to easily be applied
+*/
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    background-color: #99A12B;
+}
+
+.nav-link{
+    background-color: rgb(236, 231, 231);
+    color: black;
+}

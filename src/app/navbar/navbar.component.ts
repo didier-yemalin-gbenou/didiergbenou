@@ -21,8 +21,8 @@ export class NavbarComponent implements OnInit {
       addr: '/education'
     },
     { 
-      label: 'Projects',
-      addr: '/projects'
+      label: 'Hands-On',
+      addr: '/hands-on'
     },
     { 
       label: 'Organizations',

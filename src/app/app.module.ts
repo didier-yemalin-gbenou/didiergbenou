@@ -2,7 +2,7 @@ import { ContactService } from './contact/contact.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalModule } from 'ngx-bootstrap/modal';
+import { TabsModule } from 'ngx-bootstrap';
 
 import { ReCaptchaModule } from 'angular2-recaptcha';
 
@@ -23,7 +23,6 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { OrganizationsComponent } from './organizations/organizations.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -31,6 +30,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { HandsOnComponent } from './hands-on/hands-on.component';
+import { ProjectsComponent } from './hands-on/projects/projects.component';
+import { SkillsComponent } from './hands-on/skills/skills.component';
+
 
 
 
@@ -47,6 +50,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     AboutComponent,
+    HandsOnComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,7 @@ import { FormsModule } from '@angular/forms';
       { path: '', component: AboutComponent },
       { path: 'experience', component: ExperienceComponent },
       { path: 'education', component: EducationComponent },
-      { path: 'projects', component: ProjectsComponent },
+      { path: 'hands-on', component: HandsOnComponent },
       { path: 'organizations', component: OrganizationsComponent },
       { path: 'contact', component: ContactComponent },
       { path: '**', component: NotFoundComponent}
@@ -70,7 +75,7 @@ import { FormsModule } from '@angular/forms';
     ReCaptchaModule,
     FormsModule,
     HttpClientModule,
-    ModalModule.forRoot()
+    TabsModule.forRoot()
   ],
   providers: [
     ContactService

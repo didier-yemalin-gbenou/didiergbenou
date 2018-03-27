@@ -21,12 +21,12 @@ export class NavbarComponent implements OnInit {
       addr: '/education'
     },
     { 
-      label: 'Hands-On',
-      addr: '/hands-on'
-    },
-    { 
       label: 'Organizations',
       addr: '/organizations'
+    },
+    { 
+      label: 'Hands-On',
+      addr: '/hands-on'
     },
     { 
       label: 'Contact',

@@ -16,7 +16,8 @@ import { MatTabsModule,
          MatFormFieldModule,
          MatInputModule,
          MatSnackBarModule,
-         MatTooltipModule
+         MatTooltipModule,
+         MatGridListModule
         } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -72,6 +73,7 @@ import { SkillsComponent } from './hands-on/skills/skills.component';
     MatInputModule,
     MatSnackBarModule,
     MatTooltipModule,
+    MatGridListModule,
     ReCaptchaModule,
     FormsModule,
     HttpClientModule,

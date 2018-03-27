@@ -1,3 +1,12 @@
-<p>
-  skills works!
-</p>
+<div class="container-fluid">
+  <mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let skill of skills"
+                   colspan="2"
+                   rowspan="1">
+      <img matTooltip={{skill.name}}
+           src="{{skill.link}}" 
+           alt="{{skill.name}}">
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+  

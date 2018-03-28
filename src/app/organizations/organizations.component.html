@@ -1,5 +1,5 @@
 <ul class="list-group"> 
-  <a *ngFor="let org of organizations"
+  <a *ngFor="let org of organizations | async"
      href="{{org.link}}"
      matTooltip="Click to open link"
      matTooltipPosition="left"

@@ -1,4 +1,6 @@
+import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-about',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  
+  content: Observable<any>;
 
-  constructor() { }
+  constructor(db: AngularFireDatabase) { 
+    this.content = db.object('about').valueChanges();
+  }
 
   ngOnInit() {
   }

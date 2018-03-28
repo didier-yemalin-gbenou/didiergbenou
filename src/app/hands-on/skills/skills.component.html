@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <mat-grid-list cols="4">
-    <mat-grid-tile *ngFor="let skill of skills"
+    <mat-grid-tile *ngFor="let skill of skills | async"
                    colspan="2"
                    rowspan="1">
       <img matTooltip={{skill.name}}

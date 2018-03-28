@@ -1,3 +1,5 @@
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,27 +9,11 @@ import { Component } from '@angular/core';
 })
 export class OrganizationsComponent {
 
-  organizations = [
-    {
-      name: "Drexel Hackathon and Coding Club",
-      link: "https://github.com/D-HAC/D-HAC.github.io",
-      logo: "assets/images/dhac.png"
-    },
-    {
-      name: "Phi Theta Kappa Honor Society",
-      link: "https://www.ptk.org/default.aspx",
-      logo: "assets/images/PTK.png"
-    },
-    {
-      name: "Association for Computing Machinery",
-      link: "http://www.acm.org/",
-      logo: "assets/images/acm.png"
-    }
-    
+  organizations: Observable<any>;
 
-    
-    
-    
-  ]
+  constructor(db: AngularFireDatabase){
+    this.organizations = db.list('organizations').valueChanges();
+  }
+
 
 }

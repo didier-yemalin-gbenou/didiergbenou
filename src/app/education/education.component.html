@@ -1,7 +1,7 @@
-<mat-card *ngFor="let education of educations">
+<mat-card *ngFor="let education of educations | async">
 
   <mat-card-header>
-    <mat-card-title class="title">{{education.school}}</mat-card-title>
+    <mat-card-title class="title">{{education.name}}</mat-card-title>
     <mat-card-subtitle>{{education.degreeInfo}}</mat-card-subtitle>
     <mat-card-subtitle>{{education.duration}}</mat-card-subtitle>
     <mat-card-title>{{education.moreInfo}}</mat-card-title> 

@@ -35,6 +35,10 @@ import { HandsOnComponent } from './hands-on/hands-on.component';
 import { ProjectsComponent } from './hands-on/projects/projects.component';
 import { SkillsComponent } from './hands-on/skills/skills.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+
 
 
 
@@ -77,7 +81,11 @@ import { SkillsComponent } from './hands-on/skills/skills.component';
     ReCaptchaModule,
     FormsModule,
     HttpClientModule,
-    TabsModule.forRoot()
+
+    TabsModule.forRoot(),
+
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [
     ContactService

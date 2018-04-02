@@ -10,6 +10,10 @@
     border-radius: 100%;
 }
 
+.title-2{
+    margin-top: 4%;
+}
+
 .social-img:hover{
     background: black;
 }

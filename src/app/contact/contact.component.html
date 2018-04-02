@@ -1,3 +1,8 @@
+<div *ngIf="_sendingEmail">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+
 <h2>Contact Me</h2>
 
 <form #contactForm="ngForm" (ngSubmit)="processForm(contactForm)">

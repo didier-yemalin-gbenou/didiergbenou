@@ -12,6 +12,7 @@ export class ContactComponent {
 
   _messageIsBlank = true;
   _captchaIsValid;
+  _sendingEmail = false;
   
   constructor( private contactService: ContactService,
                public snackBar: MatSnackBar){}
@@ -48,14 +49,19 @@ export class ContactComponent {
 
     if(!this._captchaIsValid){
       this.openSnackBar("Captcha validation is required")
-      return
+      return;
     }
 
+    this._sendingEmail = true;
+
     this.contactService.sendEmail(form.value)
-                        .subscribe(resp => this.openSnackBar(resp));
+                        .subscribe(resp => {
+                                              this.openSnackBar(resp);
+                                              this._sendingEmail = false;
+                                              this._captchaIsValid = false;
+                                            });
     
     this._messageIsBlank = true;
-    form.resetForm();
-    
+    form.resetForm();    
   }
 }

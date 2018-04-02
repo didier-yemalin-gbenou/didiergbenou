@@ -17,7 +17,8 @@ import { MatTabsModule,
          MatInputModule,
          MatSnackBarModule,
          MatTooltipModule,
-         MatGridListModule
+         MatGridListModule,
+         MatProgressBarModule
         } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -78,6 +79,7 @@ import { environment } from '../environments/environment';
     MatSnackBarModule,
     MatTooltipModule,
     MatGridListModule,
+    MatProgressBarModule,
     ReCaptchaModule,
     FormsModule,
     HttpClientModule,

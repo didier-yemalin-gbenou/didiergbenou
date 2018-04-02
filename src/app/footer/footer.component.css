@@ -1,0 +1,12 @@
+.footer-bottom{
+    border-top: 1px rgb(197, 197, 197) solid;
+    padding-top: 15px;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+}

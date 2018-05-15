@@ -10,11 +10,11 @@ import { Component } from '@angular/core';
 export class ExperienceComponent {
 
   experiences: Observable<any>;
-  loading: boolean = true;
+  loading = true;
 
-  constructor(db:AngularFireDatabase){
+  constructor(db: AngularFireDatabase){
     this.experiences = db.list('experiences').valueChanges();
-    this.experiences.subscribe(()=>{ this.loading = false; })
+    this.experiences.subscribe(() => { this.loading = false; });
   }
 
 }

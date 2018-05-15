@@ -13,20 +13,20 @@ export class ContactService {
     })
   };
 
-  constructor( private _http:HttpClient ) {}
+  constructor( private _http: HttpClient ) {}
 
-  validateCaptcha(response:string){
-    
-    let data = JSON.stringify({'response':response});
+  validateCaptcha(response: string){
 
-    return this._http.post('/api/captcha', data, this._httpOptions)
-              
+    const data = JSON.stringify({'response': response});
+
+    return this._http.post('/api/captcha', data, this._httpOptions);
+
   }
 
   sendEmail(form_data: NgForm){
 
     return this._http.post('/api/contact', JSON.stringify(form_data), this._httpOptions)
-              .pipe(map(resp => resp['value']))        
+              .pipe(map(resp => resp['value']));
   }
 
 }

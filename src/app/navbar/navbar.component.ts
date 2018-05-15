@@ -8,27 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   navLinks = [
-    { 
+    {
       label: 'About',
-      addr: '' 
+      addr: ''
     },
-    { 
+    {
       label: 'Experience',
       addr: '/experience'
     },
-    { 
+    {
       label: 'Education',
       addr: '/education'
     },
-    { 
+    {
       label: 'Organizations',
       addr: '/organizations'
     },
-    { 
+    {
       label: 'Hands-On',
       addr: '/hands-on'
     },
-    { 
+    {
       label: 'Contact',
       addr: '/contact'
     }

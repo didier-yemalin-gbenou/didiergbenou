@@ -12,9 +12,9 @@ export class SkillsComponent implements OnInit {
   @Output('isLoaded') isLoaded = new EventEmitter();
   skills: Observable<any>;
 
-  constructor(db: AngularFireDatabase) { 
+  constructor(db: AngularFireDatabase) {
     this.skills = db.list('skills').valueChanges();
-    this.skills.subscribe(()=>{ this.isLoaded.emit() })
+    this.skills.subscribe(() => { this.isLoaded.emit(); });
   }
 
   ngOnInit() {

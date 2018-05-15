@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  animations:[
+  animations: [
     bounce,
     slideIn
   ]
@@ -14,25 +14,25 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   icons = [
-    { 
+    {
       name: 'fa-linkedin',
       link: 'https://www.linkedin.com/in/didier-gbenou-08271348',
       tooltip: 'LinkedIn',
       target: '_blank'
     },
-    { 
+    {
       name: 'fa-github',
       link: 'https://github.com/didier-yemalin-gbenou' ,
       tooltip: 'Github',
       target: '_blank'
     },
-    { 
+    {
       name: 'fa-bitbucket',
       link: 'https://bitbucket.org/dyg23-drexel/' ,
       tooltip: 'Bitbucket',
       target: '_blank'
     },
-    { 
+    {
       name: 'fa-stack-overflow',
       link: 'https://stackoverflow.com/users/7098615/dayderluv?tab=profile' ,
       tooltip: 'Stackoverflow',

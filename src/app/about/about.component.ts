@@ -8,13 +8,13 @@ import { AngularFireDatabase } from 'angularfire2/database';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  
-  content: Observable<any>;
-  loading: boolean = true;
 
-  constructor(db: AngularFireDatabase) { 
+  content: Observable<any>;
+  loading = true;
+
+  constructor(db: AngularFireDatabase) {
     this.content = db.object('about').valueChanges();
-    this.content.subscribe(()=>{ this.loading = false; });
+    this.content.subscribe(() => { this.loading = false; });
   }
 
   ngOnInit() {

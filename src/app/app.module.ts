@@ -10,9 +10,9 @@ import { RouterModule } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatTabsModule, 
-         MatCardModule, 
-         MatChipsModule, 
+import { MatTabsModule,
+         MatCardModule,
+         MatChipsModule,
          MatFormFieldModule,
          MatInputModule,
          MatSnackBarModule,

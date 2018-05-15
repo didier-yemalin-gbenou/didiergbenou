@@ -9,12 +9,12 @@ import { Component } from '@angular/core';
 })
 export class EducationComponent {
   educations: Observable<any>;
-  loading: boolean = true;
+  loading = true;
 
-  constructor(db:AngularFireDatabase){
+  constructor(db: AngularFireDatabase){
     this.educations = db.list('schools').valueChanges();
-    this.educations.subscribe(()=>{ this.loading = false; })
+    this.educations.subscribe(() => { this.loading = false; });
   }
-  
+
 
 }

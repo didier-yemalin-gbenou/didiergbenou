@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HandsOnComponent implements OnInit {
 
-  loading: boolean = true;
+  loading = true;
 
   constructor() { }
 

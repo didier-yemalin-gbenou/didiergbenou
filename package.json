@@ -4,11 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build && node server.js",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -16,7 +17,6 @@
     "@angular/cdk": "^2.0.0-beta.12",
     "@angular/common": "^4.4.6",
     "@angular/compiler": "^4.4.6",
-    "@angular/compiler-cli": "^4.4.6",
     "@angular/core": "^4.4.6",
     "@angular/forms": "^4.4.6",
     "@angular/http": "^4.4.6",
@@ -31,6 +31,8 @@
     "body-parser": "^1.18.2",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    
+    "emailjs": "^2.0.0",
     "express": "^4.16.2",
     "firebase": "^4.5.0",
     "font-awesome": "^4.7.0",
@@ -38,11 +40,12 @@
     "ngx-bootstrap": "^2.0.5",
     "rxjs": "^5.5.2",
     "web-animations-js": "^2.3.1",
-    "zone.js": "^0.8.18"
-  },
-  "devDependencies": {
+    "zone.js": "^0.8.18",
     "@angular/cli": "^1.7.3",
     "@angular/compiler-cli": "^4.2.4",
+    "typescript": "~2.3.3"
+  },
+  "devDependencies": {
     "@angular/language-service": "^4.2.4",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
@@ -58,7 +61,10 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
-    "tslint": "~5.3.2",
-    "typescript": "~2.3.3"
+    "tslint": "~5.3.2"
+  },
+  "engines":{
+    "node":"6.11.2",
+    "npm":"3.10.10"
   }
 }

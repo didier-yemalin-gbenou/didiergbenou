@@ -1,10 +1,13 @@
+<div *ngIf="loading">
+    <mat-progress-bar mode="query"></mat-progress-bar>
+  </div>
 <div class="all">
   <tabset type="pills">
       <tab heading="Projects">
-          <app-projects></app-projects>
+          <app-projects (isLoaded)="stopLoading()"></app-projects>
       </tab>
       <tab heading="Skills">
-        <app-skills></app-skills>
+        <app-skills (isLoaded)="stopLoading()"></app-skills>
       </tab>
     </tabset>
 </div>

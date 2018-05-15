@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HandsOnComponent implements OnInit {
 
+  loading: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  stopLoading(){
+    this.loading = false;
   }
 
 }

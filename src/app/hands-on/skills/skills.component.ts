@@ -1,6 +1,6 @@
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -9,12 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
+  @Output('isLoaded') isLoaded = new EventEmitter();
   skills: Observable<any>;
-  loading: boolean = true;
 
   constructor(db: AngularFireDatabase) { 
     this.skills = db.list('skills').valueChanges();
-    this.skills.subscribe(()=>{ this.loading = false; })
+    this.skills.subscribe(()=>{ this.isLoaded.emit() })
   }
 
   ngOnInit() {

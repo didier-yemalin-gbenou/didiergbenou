@@ -15,7 +15,7 @@
                 <h5 class="media-heading">
                   Didier Gbenou
                 </h5>
-                <p>Full stack web developer</p>
+                <p class="title">On My Way To Be a Full Stack Web Developer</p>
               </div>
           </div>
         </div>
@@ -23,6 +23,13 @@
           <div @slideIn 
                class="col-md-7 col-md-offset-4">
             <div>
+                <a matTooltip="Contact"
+                   routerLink="/contact"
+                   class="fa fa-envelope
+                       social-img
+                       col-md-1"
+                   target="_self">
+                </a>
                 <a *ngFor="let icon of icons"
                    class="col-md-1"
                    matTooltip="{{ icon.tooltip }}"
@@ -32,13 +39,7 @@
                           social-img"
                    target="{{icon.target}}">
                 </a>
-                <a matTooltip="Contact"
-                   routerLink="/contact"
-                   class="fa fa-envelope
-                          social-img
-                          col-md-1"
-                   target="_self">
-                </a>
+                
             </div>
           </div>
         </div>

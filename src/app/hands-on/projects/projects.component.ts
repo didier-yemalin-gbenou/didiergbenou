@@ -1,6 +1,6 @@
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -9,12 +9,12 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  @Output('isLoaded') isLoaded = new EventEmitter();
   projects: Observable<any>;
-  loading: boolean = true;
 
   constructor(db:AngularFireDatabase){
     this.projects = db.list('projects').valueChanges();
-    this.projects.subscribe(()=>{ this.loading = false; })
+    this.projects.subscribe(()=>{ this.isLoaded.emit(); })
   }
   
 }

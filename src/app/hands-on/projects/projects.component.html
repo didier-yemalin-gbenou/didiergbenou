@@ -1,3 +1,7 @@
+<div *ngIf="loading">
+  <mat-progress-bar mode="query"></mat-progress-bar>
+</div>
+
 <div class="container-fluid all">
     <div class="row">
         <mat-card *ngFor="let project of projects | async" 

@@ -10,9 +10,11 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
 
   projects: Observable<any>;
+  loading: boolean = true;
 
   constructor(db:AngularFireDatabase){
     this.projects = db.list('projects').valueChanges();
+    this.projects.subscribe(()=>{ this.loading = false; })
   }
   
 }

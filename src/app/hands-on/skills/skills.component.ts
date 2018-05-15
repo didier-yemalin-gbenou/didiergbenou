@@ -10,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class SkillsComponent implements OnInit {
 
   skills: Observable<any>;
+  loading: boolean = true;
 
   constructor(db: AngularFireDatabase) { 
     this.skills = db.list('skills').valueChanges();
+    this.skills.subscribe(()=>{ this.loading = false; })
   }
 
   ngOnInit() {

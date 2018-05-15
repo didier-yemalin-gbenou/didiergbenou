@@ -10,9 +10,11 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class AboutComponent implements OnInit {
   
   content: Observable<any>;
+  loading: boolean = true;
 
   constructor(db: AngularFireDatabase) { 
     this.content = db.object('about').valueChanges();
+    this.content.subscribe(()=>{ this.loading = false; });
   }
 
   ngOnInit() {

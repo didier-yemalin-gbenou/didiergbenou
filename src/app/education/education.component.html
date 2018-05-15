@@ -1,3 +1,7 @@
+<div *ngIf="loading">
+  <mat-progress-bar mode="query"></mat-progress-bar>
+</div>
+
 <mat-card *ngFor="let education of educations | async">
 
   <mat-card-header>

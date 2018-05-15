@@ -1,5 +1,9 @@
+<div *ngIf="loading">
+  <mat-progress-bar mode="query"></mat-progress-bar>
+</div>
+
 <div class="container all">
-  <h3> "{{(content | async)?.title}}" </h3>
+  <h3> {{(content | async)?.title}} </h3>
   <p>
       {{(content | async)?.body}}
   </p>

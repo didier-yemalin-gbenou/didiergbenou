@@ -30,6 +30,10 @@
     margin-bottom: 60px;
 }
 
+.name-title:active, .name-title:focus {
+    outline: 0;
+  }
+
 .name{
     font-family: Pacifico;
     font-size: 4em;

@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { TabsModule } from 'ngx-bootstrap';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { ReCaptchaModule } from 'angular2-recaptcha';
 
 import { RouterModule } from '@angular/router';
@@ -19,7 +21,10 @@ import { MatTabsModule,
          MatTooltipModule,
          MatGridListModule,
          MatProgressBarModule,
-         MatProgressSpinnerModule
+         MatProgressSpinnerModule,
+         MatMenuModule,
+         MatButtonModule,
+         MatIconModule
         } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -44,6 +49,7 @@ import { environment } from '../environments/environment';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +64,7 @@ import { environment } from '../environments/environment';
     FooterComponent,
     AboutComponent,
     HandsOnComponent,
-    SkillsComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -82,9 +88,13 @@ import { environment } from '../environments/environment';
     MatGridListModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
     ReCaptchaModule,
     FormsModule,
     HttpClientModule,
+    FlexLayoutModule,
 
     TabsModule.forRoot(),
 

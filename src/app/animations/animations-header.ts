@@ -48,7 +48,7 @@ export let bounce = trigger('bounce', [
 export let slideIn = trigger('slideIn', [
     transition(':enter', [
         query('a', [
-            style({ transform: 'translateX(1000px)'}),
+            style({ transform: 'translateX(1500px)'}),
             stagger(100, [
 
                 animate('1s 1s'),

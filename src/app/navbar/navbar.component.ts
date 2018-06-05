@@ -31,7 +31,8 @@ export class NavbarComponent implements OnInit {
     {
       label: 'Contact',
       addr: '/contact'
-    }
+    },
+    
   ];
 
   constructor() { }

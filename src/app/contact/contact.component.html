@@ -1,6 +1,9 @@
 <h2>Contact Me</h2>
 
-<form #contactForm="ngForm" (ngSubmit)="processForm(contactForm)">
+<form #contactForm="ngForm" 
+      (ngSubmit)="processForm(contactForm)"
+      [ngClass.lt-md]="'container-fluid'" 
+      [ngClass.gt-sm]="'container'">
   <div class="form-group"
        [class.has-error]="email.touched && !email.valid">
     <label for="visitorEmail">Email address</label>

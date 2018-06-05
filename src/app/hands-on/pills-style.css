@@ -4,7 +4,7 @@ the styles are imported into styles.css to easily be applied
 */
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
-    background-color: #99A12B;
+    background-color: rgb(192,192,192);
 }
 
 .nav-link{

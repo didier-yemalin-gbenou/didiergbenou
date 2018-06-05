@@ -2,13 +2,15 @@
   <mat-progress-bar mode="query"></mat-progress-bar>
 </div>
 
-<ul class="list-group"> 
+<ul [ngClass.lt-md]="'container-fluid'" 
+    [ngClass.gt-sm]="'container'"
+    class="list-group"> 
   <a *ngFor="let org of organizations | async"
      href="{{org.link}}"
      matTooltip="Click to open link"
      matTooltipPosition="left"
      target="_blank">
-    <li class="list-group-item">
+    <li class="list-group-item" [ngClass.lt-md]="'li-xs'">
         {{org.name}}
       <img src="{{org.logo}}" alt="org logo">
     </li>

@@ -1,9 +1,6 @@
-.all{
-    margin-top: 2%;
-}
+
 mat-card{
-    width: 530px;
-    height: 250px;
+    margin-top: 30px;
 }
 
 
@@ -11,8 +8,14 @@ mat-card{
     margin: 0;
 }
 
+
+
 mat-card-title{
     text-align: justify;
+}
+
+.mat-card-title-xs{
+    padding-left:12px
 }
 
 
@@ -25,4 +28,3 @@ mat-chip-list{
 .data{
     flex: 5;
 }
-

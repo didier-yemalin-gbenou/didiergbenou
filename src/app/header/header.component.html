@@ -1,50 +1,50 @@
 <header>
   <div id="top">
     <div class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div @bounce 
-               class="media col-md-offset-3 col-md-6">
-            <div class="media-left">
-                <img class="avatar media-object" 
-                     src="assets/images/profilePic.jpeg" 
-                     alt="profile pic">
-            </div>
-              
-              <div class="media-body">
-                <h5 class="media-heading">
+      <div class="container"
+           fxLayout="column"
+           fxLayoutAlign="center center">
+        <div @bounce 
+             fxLayout.lt-md="column" 
+             fxLayoutAlign.lt-md="center center" 
+             [ngClass.gt-sm]="'media col-md-6'" 
+             class="name-title">
+          <div [ngClass.gt-sm]="'media-middle'">
+            <img [ngClass.gt-sm]="'media-object'" 
+                  class="avatar" 
+                  src="assets/images/profilePic.jpeg" 
+                  alt="profile pic">
+          </div>
+
+          <div [ngClass.gt-sm]="'media-body'">
+            <h5 [ngClass.gt-sm]="'media-heading'"
+                [ngClass.xs]="'name-xs'"
+                 class="name">
                   Didier Gbenou
-                </h5>
-                <p class="title">On My Way To Be a Full Stack Web Developer</p>
-              </div>
+            </h5>
+            <p [ngClass.xs]="'title-xs'"
+                class="title">
+              On My Way To Be a Full Stack Web Developer
+            </p>
           </div>
         </div>
-        <div class="row">
-          <div @slideIn 
-               class="col-md-7 col-md-offset-4">
-            <div>
-                <a matTooltip="Contact"
-                   routerLink="/contact"
-                   class="fa fa-envelope
-                       social-img
-                       col-md-1"
-                   target="_self">
-                </a>
-                <a *ngFor="let icon of icons"
-                   class="col-md-1"
-                   matTooltip="{{ icon.tooltip }}"
-                   href="{{ icon.link }}"
-                   class="fa 
-                          {{ icon.name }} 
-                          social-img"
-                   target="{{icon.target}}">
-                </a>
-                
-            </div>
-          </div>
+
+        <div @slideIn
+              fxLayout="row" fxLayoutAlign="center center">
+          <a matTooltip="Contact"
+             routerLink="/contact"
+             class="fa fa-envelope social-img"
+             target="_self">
+          </a>
+          <a *ngFor="let icon of icons"
+              matTooltip="{{ icon.tooltip }}"
+              href="{{ icon.link }}"
+              class="fa {{ icon.name }} social-img"
+              target="{{icon.target}}">
+            </a>
         </div>
       </div>
     </div>
+    
   </div>
-
 </header>

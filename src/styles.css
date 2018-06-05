@@ -3,5 +3,15 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 @import '../src/app/hands-on/pills-style.css';
+
+.mat-tab-links{
+    display: block !important;
+}
+
+.mat-chip-list-wrapper {
+    align-items: baseline !important;
+    margin: -10px !important;
+}

@@ -1,20 +1,29 @@
-<nav 
-     mat-tab-nav-bar>
-     <div class="container-fluid">
-        <div class="row">
-            
-                    <a mat-tab-link class="col-md-2"
-                        *ngFor="let link of navLinks"
-                        [routerLink] = "link.addr"
-                        routerLinkActive #rla="routerLinkActive"
-                        [active]="rla.isActive"
-                        [routerLinkActiveOptions]="{ exact: true }">
-                        {{link.label}}
-                    </a>
-                
-                 </div>
-     </div>
-     
-    
+<nav fxShow.lt-md="true" fxHide>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button *ngFor="let link of navLinks"
+                 mat-menu-item>
+            <a [routerLink] = "link.addr">
+                 {{link.label}}
+            </a>
+        </button>
+    </mat-menu>
 </nav>
+
+
+<nav mat-tab-nav-bar fxShow.lt-md="false">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <a mat-tab-link fxFlex="16.66"
+               *ngFor="let link of navLinks"
+               [routerLink] = "link.addr"
+               routerLinkActive #rla="routerLinkActive"
+               [active]="rla.isActive"
+               [routerLinkActiveOptions]="{ exact: true }">
+                {{link.label}}
+            </a>    
+        </div>  
+</nav>
+
 

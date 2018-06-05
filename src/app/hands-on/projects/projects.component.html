@@ -1,5 +1,6 @@
-<div class="container-fluid all">
-    <div class="row">
+<div [ngClass.lt-md]="'container-fluid'" 
+     [ngClass.gt-sm]="'container'">
+    
         <mat-card *ngFor="let project of projects | async" 
                   class="col-sm-5 col-sm-offset-1">
             <mat-card-header>
@@ -11,15 +12,12 @@
               </mat-chip-list>
       
               <div class="data">
-                <mat-card-title>{{project.name}}</mat-card-title>
-                <mat-card-title>{{project.problem}}</mat-card-title>
-                <mat-card-title>{{project.solution}}</mat-card-title>
+                <mat-card-title [ngClass.lt-lg]="'mat-card-title-xs'">{{project.name}}</mat-card-title>
+                <mat-card-title [ngClass.lt-lg]="'mat-card-title-xs'">{{project.problem}}</mat-card-title>
+                <mat-card-title [ngClass.lt-lg]="'mat-card-title-xs'">{{project.solution}}</mat-card-title>
               </div>
               
             </mat-card-header>
           </mat-card>
-      </div>
+      
 </div>
-
-
-

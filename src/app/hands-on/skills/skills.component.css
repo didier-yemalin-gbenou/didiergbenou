@@ -2,3 +2,13 @@ img{
     height: 200px;
     width: 350px;
 }
+
+.img-sm{
+    height: 150px;
+    width: 250px;
+}
+
+.img-xs{
+    height: 50px;
+    width: 75px;
+}

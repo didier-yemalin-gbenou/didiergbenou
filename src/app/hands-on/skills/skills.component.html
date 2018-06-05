@@ -3,9 +3,10 @@
     <mat-grid-tile *ngFor="let skill of skills | async"
                    colspan="2"
                    rowspan="1">
-      <img matTooltip={{skill.name}}
-           src="{{skill.link}}" 
-           alt="{{skill.name}}">
+      <img src="{{skill.link}}" 
+           alt="{{skill.name}}"
+           [ngClass.sm]="'img-sm'"
+           [ngClass.xs]="'img-xs'">
     </mat-grid-tile>
   </mat-grid-list>
 </div>
